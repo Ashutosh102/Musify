@@ -142,11 +142,19 @@ ul ul a {
 }
 
 @media (max-width: 600px) {
+    
     #search-keywords {
         width: 200px!important;
     }
     .card {
         width: 9rem!important;
+    }
+    .container-fluid{
+        width: 95%!important
+    }
+    .fixed-bottom .container{
+        width: 90%!important;
+        padding: 3px 3px 3px 3px;
     }
    /* #home {
        margin-top: 9%!important;

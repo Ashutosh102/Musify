@@ -3,8 +3,8 @@ var router = express.Router();
 var SpotifyWebApi = require('spotify-web-api-node');
 
 var spotifyApi = new SpotifyWebApi({
-    clientId: '63c9dd7d86144239971ceacbe077d1d8',
-    clientSecret: '3235ae02a03b4078953dc337aef00983'
+    clientId: 'f2798121f9fb48e9b882b1d6aecd346c',
+    clientSecret: '3c8849701f8e4e2ab43cf0f1a6603bd5'
 });
 
 // Retrieve an access token
@@ -25,10 +25,10 @@ spotifyApi.clientCredentialsGrant().then(
 );
 
 router.get('/', function (req, res) {
-    spotifyApi.getAlbums(['2zkyMw73XzNXUQaXTb4cio', '4ceWEQarPyTyeb9TUeyLOG',
-            '54NUwj7U1MOhA1ZGbnhiMz', '4neocSMt40stXKK2B8Sy2G',
-            '6cunQQ7YZisYOoiFu2ywIq', '7LF4N7lvyDhrPBuCJ1rplJ',
-            '6leYdBPs1XzfUgpc8xgeSi', '3RZxrS2dDZlbsYtMRM89v8', '7J5iE51Mk97Mf0BjjwYXUZ'
+    spotifyApi.getAlbums(['0Rkv5iqjF2uenfL0OVB8hg', '7wgrW5XyZdtk0K8PkW5A7h',
+            '3Ho9myCfRqygtmG3a073Zx', '715BUKTdGdNjePHLhRltCT',
+            '2khzKvw27vsWmb8xgnqxKb', '7sPtZdZmSgXHPheagFLje9',
+            '1o1ElG9Z0MKQ7IDHhua1fK', '62afs3y06fy6gZqMUASF9I', '3wvpIkfl4oOgZLMaQBWadf'
         ],
         function (err, data) {
             if (err) throw err;
@@ -52,63 +52,63 @@ router.get('/', function (req, res) {
             var ninthAlbumName = data.body.albums[8].name;
 
             // get tracks in first album
-            spotifyApi.getAlbumTracks('2zkyMw73XzNXUQaXTb4cio', {
-                limit: 1,
-                offset: 1
+            spotifyApi.getAlbumTracks('0Rkv5iqjF2uenfL0OVB8hg', {
+                limit: 10,
+                offset: 10
             }, function (err, data) {
                 if (err) throw err;
                 var resultOne = data.body.items[0];
                 // Get tracks in second album
-                spotifyApi.getAlbumTracks('4ceWEQarPyTyeb9TUeyLOG', {
+                spotifyApi.getAlbumTracks('7wgrW5XyZdtk0K8PkW5A7h', {
                         limit: 1,
                         offset: 1
                     }, function (err, data) {
                     if (err) throw err;
                     var resultTwo = data.body.items[0];
                     // Get tracks in third album
-                    spotifyApi.getAlbumTracks('54NUwj7U1MOhA1ZGbnhiMz', {
+                    spotifyApi.getAlbumTracks('3Ho9myCfRqygtmG3a073Zx', {
                             limit: 2,
                             offset: 1
                         }, function (err, data) {
                             if (err) throw err;
                             var resultThree = data.body.items[0];
                             // Get tracks in fourth album
-                            spotifyApi.getAlbumTracks('4neocSMt40stXKK2B8Sy2G', {
+                            spotifyApi.getAlbumTracks('715BUKTdGdNjePHLhRltCT', {
                                 limit: 1,
                                 offset: 1
                                 }, function (err, data) {
                                     if (err) throw err;
                                     var resultFour = data.body.items[0];
                                     // Get tracks in fifth album
-                                     spotifyApi.getAlbumTracks('6cunQQ7YZisYOoiFu2ywIq', {
+                                     spotifyApi.getAlbumTracks('2khzKvw27vsWmb8xgnqxKb', {
                                                  limit: 1,
                                                  offset: 1
                                              }, function (err, data) {
                                                  if (err) throw err;
                                                  var resultFive = data.body.items[0];
                                                  // Get tracks in sixth album
-                                                 spotifyApi.getAlbumTracks('7LF4N7lvyDhrPBuCJ1rplJ', {
+                                                 spotifyApi.getAlbumTracks('7sPtZdZmSgXHPheagFLje9', {
                                                      limit: 1,
                                                      offset: 1
                                                  }, function (err, data) {
                                                      if (err) throw err;
                                                      var resultSix = data.body.items[0];
                                                      // Get tracks in Seventh album
-                                                     spotifyApi.getAlbumTracks('6leYdBPs1XzfUgpc8xgeSi', {
+                                                     spotifyApi.getAlbumTracks('1o1ElG9Z0MKQ7IDHhua1fK', {
                                                          limit: 2,
                                                          offset: 1
                                                      }, function (err, data) {
                                                          if (err) throw err;
                                                          var resultSeven = data.body.items[1];
                                                          // Get tracks in eigth album
-                                                         spotifyApi.getAlbumTracks('3RZxrS2dDZlbsYtMRM89v8', {
+                                                         spotifyApi.getAlbumTracks('62afs3y06fy6gZqMUASF9I', {
                                                              limit: 1,
                                                              offset: 1
                                                          }, function (err, data) {
                                                              if (err) throw err;
                                                              var resultEigth = data.body.items[0];
                                                              // Get tracks in ninth album
-                                                             spotifyApi.getAlbumTracks('7J5iE51Mk97Mf0BjjwYXUZ', {
+                                                             spotifyApi.getAlbumTracks('3wvpIkfl4oOgZLMaQBWadf', {
                                                                  limit: 1,
                                                                  offset: 1
                                                              }, function (err, data) {

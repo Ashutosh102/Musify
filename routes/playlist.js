@@ -3,7 +3,7 @@ var mongoClient = require('mongodb').MongoClient;
 var ObjectID = require("mongodb").ObjectID;
 var db;
 
-url = "mongodb+srv://roshan:9939105936@music-app-db-hexhh.mongodb.net/?retryWrites=true&w=majority";
+url = "mongodb+srv://DevAshu:Ashutosh3815@cluster0.ga5yb.mongodb.net/?retryWrites=true&w=majority";
 
 mongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, client) {
     if (err) throw err;
