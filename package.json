@@ -1,5 +1,5 @@
 {
-  "name": "au3_sd_music-streaming",
+  "name": "Musify",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/attainu-nightingale/au3_sd_music-streaming.git"
+    "url": "git+https://github.com/Ashutosh102/Musify.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/attainu-nightingale/au3_sd_music-streaming/issues"
+    "url": "https://github.com/Ashutosh102/Musify/issues"
   },
-  "homepage": "https://github.com/attainu-nightingale/au3_sd_music-streaming#readme",
+  "homepage": "https://github.com/Ashutosh102/Musify#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-session": "^1.16.2",
